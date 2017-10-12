@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+<script>
+    let [a,b,c]=[1,2,3];
+    console.log(a,b,c);  //1 2 3
+    let [a1,a2,[a3],a4]=[1,2,[3,4],5];
+    console.log(a1,a2,a3,a4); //1 2 3 5
+    let [b1,b2,b3,b4]=[1,2,[3,4],5];
+    console.log(b1,b2,b3,b4);//1 2 (2) [3, 4] 5
+    let [c1,c2,[c3,c4=4],c5]=[1,2,[3,7],4];
+    console.log(c1,c2,c3,c4,c5);//1 2 3 7 4
+
+let obj={
+    name:'zhangsan',
+    age:18
+};
+    let {age,name}=obj;
+    console.log(name,age); //zhangsan 18
+    let {u,j}=obj;
+    console.log(u,j); //undefined undefined
+    let {age:age1,name:name1}=obj;
+    console.log(name1,age1);  //zhangsan 18
+let str='hell o';
+    let [d1,d2,d3,d4,d5,d6]=str;
+    console.log(d1,d2,d3,d4,d5,d6);//h e l l   o
+
+//值的互换
+   var n1=5;
+   var n2=6;
+    console.log(n1,n2);
+   let temp=n1;
+    n1=n2;
+    n2=temp;
+    console.log(n1,n2);
+
+     n1=5;
+     n2=6;
+    console.log(n1,n2);
+    n1=n1+n2;
+    n2=n1-n2;
+    n1=n1-n2;
+    console.log(n1,n2);
+
+
+    n1=5;
+    n2=6;
+    console.log(n1,n2);
+    n1=[n2,n2=n1][0];
+    console.log(n1,n2);
+
+
+    n1=5;
+    n2=6;
+    console.log(n1,n2);
+     [n1,n2]=[n2,n1];
+    console.log(n1,n2);
+
+let json='{"f1":"hello","f2":"world"}';
+    let obj2=JSON.parse(json);//string => object
+   let {f1,f2}=obj2;
+console.log(f1,f2);  //hello world
+
+    let str1 = JSON.stringify(obj2);//object => string
+console.log(str1);   //{"f1":"hello","f2":"world"}
+
+
+//    如果某个变量之前有定义，则需要就够赋值时加（）
+let m1=2;
+    ({m1} = {m1:1});
+    console.log(m1);
+
+</script>
+</body>
+
+</html>
