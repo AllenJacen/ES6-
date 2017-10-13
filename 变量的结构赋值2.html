@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<script type="text/ecmascript-6">-->
+<script >
+    const node={
+        loc:{
+            start:{
+                line:1,
+                column:5
+            }
+        }
+    };
+    let {loc,loc:{start},loc:{start:{line}}}=node;
+    console.log(line);   //1
+    console.log(loc);   //Object { start: {line: 1, column: 5}  }
+    console.log(start);  //Object  column:5  line:1
+   /* let x;
+    {x}={x:1};
+    console.log(x);*/
+//上面代码的写法会报错，因为 JavaScript 引擎会将{x}理解成
+// 一个代码块，从而发生语法错误。
+// 只有不将大括号写在行首，避免 JavaScript 将其解释为代码块，才能解决这个问题。
+
+    //函数参数的结构
+
+   let add=([x,y])=>{
+       return x+y;
+   }
+console.log( [[1,2],[3,4]].map(([a,b])=> a+b));
+console.log([1,undefined,3].map((d='yes')=>d));
+</script>
+</body>
+</html>
