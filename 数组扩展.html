@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //json 数组
+    let json={
+        '0':'zhangsan',
+        '2':18,
+        length:2
+    };
+    console.log(json);
+    console.log(Array.from(json));
+    let arr=new Array([3]);
+    console.log(arr);
+    let arr2=Array.of(3);
+    console.log(arr2);
+    let arr3=[2,3,5,7,4,2,7,3,5];
+    console.log(arr3);
+    console.log(arr3.copyWithin(3,5,8));
+
+</script>
 </body>
 </html>
