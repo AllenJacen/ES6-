@@ -7,13 +7,75 @@
 <body>
 <script>
 //    'use strict';
-let add=(x,y)=> x+y;
+/*let add=(x,y)=> x+y;
 let red=(x,y)=> {return x-y};
     console.log(add(5,6));
     console.log(red(5,6));
     let a=6;
     console.log(a);
-console.log(window.a);
+console.log(window.a);*/
+
+/*let x=1;
+let f=(x,y=x)=> console.log(y);
+f(2);*/
+/*let x=1;
+let f=(y,x)=> console.log(x,y);
+f(2);*/
+
+//let x=1;
+//let f=(y=x)=> console.log(x,y);
+//f();  // 1,1
+/*
+    let foo='outer';
+    let bar=(func=()=>foo)=>{
+        let foo='inner';
+        console.log(func());
+    }
+    bar();    //outer
+    */
+/*    let bar=(func=()=>foo)=>{
+        let foo='inner';
+        console.log(func());
+    }
+    bar();   //foo is not defined at func at bar*/
+/* let x=1;
+let foo=(x,y=()=>{x=2;console.log("y:"+x);})=>{
+     var x=3;
+    y();
+    console.log('foo:'+x);
+}
+foo();
+console.log('outer:'+x);*/
+/*let x=1;
+let foo=(x,y=()=>{x=2;console.log("y:"+x);})=>{
+     x=3;
+    y();
+    console.log('foo:'+x);
+};*/
+/*let theowIfMissing=()=> {throw new Error('Missing parameter')};
+let foo=(mustBeProvided =theowIfMissing())=>mustBeProvided;
+foo();*/
+//console.log('outer:'+x);
+
+//    let add=(...values)=>{
+//        let sum=0;
+//        for(var val of values){
+//            sum+=val;
+//        }
+//        return sum;
+//    }
+// console.log(add(2,5,9));
+    //箭头函数
+/*    [1,2,3].map(function (x) {
+        return x*x;
+    });
+    [1,2,3].map(x=>x*x);*/
+
+//var result=value.sort(function (a,b) {
+//    return a-b;
+//});
+//var result=values.sort((a,b)=>a-b);
+
 </script>
 </body>
 </html>
