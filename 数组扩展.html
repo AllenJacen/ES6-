@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
 <script>
     //json 数组
-    let json={
+/*    let json={
         '0':'zhangsan',
         '2':18,
         length:2
     };
     console.log(json);
     console.log(Array.from(json));
-    let arr=new Array([3]);
+   //类数组 转化为数组
+    let aDiv =document.querySelectorAll('div');
+   let arr1=[div1,div2,div3]=[...aDiv];
+   console.log(arr1);
+   let arr2=Array.from(aDiv);
+    console.log(arr2);
+    let arr3=[].slice.call(aDiv);
+    console.log(arr3);
+    let arr4=Array.prototype.slice.call(aDiv);
+    console.log(arr4);
+    console.log(arr4.constructor);*/
+
+   /* let arr=new Array([3]);
     console.log(arr);
     let arr2=Array.of(3);
     console.log(arr2);
     let arr3=[2,3,5,7,4,2,7,3,5];
     console.log(arr3);
-    console.log(arr3.copyWithin(3,5,8));
-
+    console.log(arr3.copyWithin(3,5,8));*/
+let arr5=Array.from({length:5},(i=0)=>i+1);
+function ArrayOf() {
+    return [].slice.call(arguments);
+}
+console.log(arr5);
 </script>
 </body>
 </html>
