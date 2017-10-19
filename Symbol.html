@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//基本数据类型：number、string、boolean、null、undefined。
+//引用数据类型：Object.
+    //ES6里新增一个Symbol类型。
+/*
+let name=Symbol();
+let obj1={
+    name:'zhangsan',
+    age:18
+};
+console.log(obj1);
+let s1=Symbol('foo');
+console.log(s1);
+
+const my=Symbol();
+const a={};
+a.my='hello';
+a[my]='world';
+console.log(a['my']);  //hello
+console.log(a.my);  //hello
+console.log(a[my]);  //world
+*/
+/*const obj={};
+let a=Symbol('a');
+let b=Symbol('b');
+obj[a]='hello';
+obj[b]='world';
+
+const objectSymbols=Object.getOwnPropertySymbols(obj);
+console.log(objectSymbols);
+console.log(objectSymbols[0]);*/
+const obj1 = {};
+let foo = Symbol("foo");
+
+Object.defineProperty(obj1, foo, {
+    value: "foobar",
+});
+for (let i in obj1) {
+    console.log(i); // 无输出
+}
+console.log(obj1);
+console.log(Object.getOwnPropertyNames(obj1));
+console.log(Object.getOwnPropertySymbols(obj1));
+let obj={
+    [Symbol('my-key')]:1,
+    enum:1,
+    nonEnum:3
+};
+console.log(Reflect.ownKeys(obj));
+
+
+
+
+
+
+</script>
+</body>
+</html>
